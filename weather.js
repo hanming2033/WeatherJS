@@ -7,7 +7,7 @@ class Weather{
 
   //Fetch weather from API
   async getWeather(){
-    const res = await fetch(`http://api.wunderground.com/api/${this.apiKey}/conditions/q/${this.state}/${this.city = city}.json`);
+    const res = await fetch(`http://api.wunderground.com/api/${this.apiKey}/conditions/q/${this.state}/${this.city}.json`);
     const resDate = await res.json();
     return resDate.current_observation;
   }
